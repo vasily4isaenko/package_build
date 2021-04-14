@@ -9,7 +9,9 @@ pipeline {
     stage('Sync with upstream') {
       steps {
         sh '''cd /export/build/aports
-git pull'''
+git stash
+git pull
+git stash pop'''
       }
     }
 
