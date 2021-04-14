@@ -1,6 +1,9 @@
 pipeline {
   agent {
-    label 'Alpine_1'
+    node {
+      label 'Alpine_1'
+    }
+
   }
   stages {
     stage('Sync with upstream') {
